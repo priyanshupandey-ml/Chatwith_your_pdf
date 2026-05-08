@@ -24,7 +24,7 @@ def get_embeddings():
     embeddings = HuggingFaceEndpointEmbeddings(
         model="BAAI/bge-base-en-v1.5",
         task="feature-extraction",
-        huggingfacehub_api_token=os.getenv("HUGGINGFACEHUB_API_TOKEN"),
+        huggingfacehub_api_token=st.secrets["HUGGINGFACEHUB_API_TOKEN"],
     )
     return embeddings
 
